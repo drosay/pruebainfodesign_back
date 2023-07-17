@@ -5,7 +5,7 @@ var mysqlConn = mysql.createConnection({
     host: 'localhost',
     database: 'pruebainfodesign',
     user: 'root',
-    password: ''
+    password: '12345'
 });
 
 //Conexión

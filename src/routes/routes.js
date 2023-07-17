@@ -20,8 +20,16 @@ router.post('/cliente', async (req, res) => {
   });
 });
 
+
+//MODIFICADO
+// Adicional a la <fechainicial> y <fechafinal>
+// recibe:
+//     <offset>:number, desde donde devuelve los datos
+//     <limit>: number, limite de datos por consulta
+//     <tramo>: string, con el tramo a consultar, "" para consultar todos
+
 router.post('/tramos-cliente', async (req, res) => {
-  await historical.getTramosCliente(req.body, (resp) =>{
+  await historical.getAllHistTramo(req.body, (resp) =>{
       res.json(resp)
   });
 });
